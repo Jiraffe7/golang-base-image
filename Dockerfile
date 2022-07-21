@@ -1,4 +1,5 @@
-FROM golang:1.18
+ARG IMAGE_VERSION=1.18
+FROM golang:$IMAGE_VERSION
 
 RUN apt-get update \
     && apt-get install -y python-is-python3 python3-pip gettext-base mysql\* vim\
