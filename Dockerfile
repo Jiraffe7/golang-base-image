@@ -1,4 +1,4 @@
-ARG IMAGE_VERSION=1.18
+ARG IMAGE_VERSION=1.19
 FROM golang:$IMAGE_VERSION
 
 RUN apt-get update \
@@ -8,6 +8,6 @@ RUN apt-get update \
 
 RUN pip install requests
 
-ARG MIGRATE_VERSION=v4.15.1
+ARG MIGRATE_VERSION=v4.15.2
 RUN curl -L https://github.com/golang-migrate/migrate/releases/download/$MIGRATE_VERSION/migrate.linux-amd64.tar.gz | tar xvz \
     && chmod +x ./migrate && mv ./migrate /usr/local/bin/migrate
